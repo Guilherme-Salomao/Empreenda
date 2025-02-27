@@ -1,0 +1,237 @@
+/* -----------------------------------------------------
+Configurações padrões
+-------------------------------------------------------*/
+body {
+    background-color: #000;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+}
+@font-face {
+    font-family: 'MuseoSans300';
+    src: url('../fonts/MuseoSans-300.otf') format('woff2'),
+        url('../fonts/MuseoSans-300.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pinot_Grigio_Modern_W00_Bold';
+    src: url('../fonts/Pinot_Grigio_Modern_W00_Bold.ttf') format('woff2'),
+        url('../fonts/Pinot_Grigio_Modern_W00_Bold.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MuseoSans2';
+    src: url('../fonts/MuseoSans_2.otf') format('woff2'),
+        url('../fonts/MuseoSans_2.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+/* -----------------------------------------------------
+Cabeçalho
+-------------------------------------------------------*/
+.header {
+    text-align: center;
+}
+
+.header img {
+    max-width: 521px;
+    padding-bottom: 60px;
+}
+
+/* -----------------------------------------------------
+Seção do título
+-------------------------------------------------------*/
+.section-title {
+    color: #00ffff;
+    border-top: 4px solid #00ffff;
+    border-bottom: 2px solid #00ffff;
+    padding: 10px 0;
+}
+
+.section-title h1 {
+    color: white;
+    font-family: 'Pinot_Grigio_Modern_W00_Bold', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+.section-title p {
+    font-family: 'MuseoSans300', sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
+.section-title .text-info {
+    color: #00ffff !important;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+/* -----------------------------------------------------
+Formulário
+-------------------------------------------------------*/
+.container form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container form h1 {
+    margin: 20px 0;
+    color: #00ffff;
+    font-family: 'Pinot_Grigio_Modern_W00_Bold', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.container form label {
+    font-family: 'MuseoSans2', sans-serif;
+    color: #f4e7e7;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container form input {
+    width: 100%;
+    background-color: #B3B6B5;
+    border-radius: 0px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: 'MuseoSans2', sans-serif;
+    font-size: 0.9rem;
+}
+
+.container form input:focus {
+    border: 1px solid #00ffff;
+    background-color: #B3B6B5;
+    color: #333;
+}
+
+/* Ajustando a obrigatoriedade */
+.container form .obrigatorio {
+    font-family: 'MuseoSans2', sans-serif;
+    color: #00ffff;
+    font-size: 1rem;
+}
+
+/* -----------------------------------------------------
+Divisão dos Inputs em Duas Colunas (Responsivo com Bootstrap)
+-------------------------------------------------------*/
+.input-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.input-group .input-box {
+    flex: 1;
+    min-width: 250px; /* Garante que não fiquem muito pequenos em telas menores */
+}
+
+/* Ajuste para os inputs dentro do Bootstrap */
+.row .col-md-6 {
+    padding-bottom: 10px;
+}
+.container form .form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.container form .form-check-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    vertical-align: middle;
+}
+
+.container form .form-check-input:checked {
+    background-color: #00ffff;
+    border-color: #00ffff;
+}
+
+.container form .form-check-label {
+    font-size: 0.9rem;
+    color: #f4e7e7;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.section-divider {
+    border-bottom: 2px solid #ffffff; /* Cor branca */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+}
+.btn-salvar {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: #ff004c; /* Cor de fundo vermelho vibrante */
+    color: #ffffff; /* Texto branco */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Texto em caixa alta */
+    padding: 12px 24px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s ease-in-out; /* Efeito suave na mudança de cor */
+}
+.btn-salvar:hover {
+    background-color: #ff004c; 
+    color: #ffffff; 
+    cursor: pointer; 
+}
+.is-invalid {
+    border: 2px solid red !important;
+    background-color: #ffebeb;
+}
+.is-invalid-radio {
+    outline: 2px solid red;
+    border-radius: 50%;
+}
+.is-invalid {
+    border: 2px solid red !important;
+    background-color: #ffebeb;
+}
+.is-invalid-radio {
+    outline: 2px solid red;
+    border-radius: 50%;
+}
+/* -----------------------------------------------------
+Footer
+-------------------------------------------------------*/
+.footer {
+    text-align: center;
+    font-family: 'MuseoSans2', Courier, monospace;
+    font-size: 0.8rem;
+}

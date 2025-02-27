@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Empreenda</title>
+
+    <!-- Bootstrap primeiro para evitar sobrescrita -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonte correta (Archivo Black) -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <!-- Seu CSS personalizado -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- jQuery e Máscaras -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="header">
+            <img src="assets/img/logo.png" alt="Empreenda Senac Logo">
+        </div>
+
+        <!-- Título da Seção -->
+        <div class="section-title">
+            <h1>Dados da Pessoa Representante da Equipe</h1>
+            <p>Representante da equipe é a pessoa responsável por iniciar uma inscrição de um time, seja ele individual
+                ou formado por mais pessoas.</p>
+            <p class="text-info">* preenchimento obrigatório</p>
+        </div>
+
+        <!-- Formulário -->
+        <form id="cadastroForm">
+            <h1>Dados Pessoais</h1>
+            <div class="mb-3">
+                <label for="nome" class="form-label"><span class="obrigatorio">*</span>Nome Completo:</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="cpf" class="form-label"><span class="obrigatorio">*</span>CPF:</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="data_nascimento" class="form-label"><span class="obrigatorio">*</span>Data de
+                        Nascimento:</label>
+                    <input type="text" class="form-control" id="data_nascimento" name="data_nascimento" required>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="email" class="form-label"><span class="obrigatorio">*</span>E-mail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Exemplo: email@gmail.com" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="emailConfirm" class="form-label"><span class="obrigatorio">*</span>Confirme seu
+                        E-mail:</label>
+                    <input type="email" class="form-control" id="emailConfirm" placeholder="Exemplo: email@gmail.com"
+                        required>
+                </div>
+                <p>Toda comunicação do Empreenda Senac será feita por e-mail. Para garantir o recebimento das mensagens,
+                    adicione os seguintes endereços à sua lista de contatos: empreenda@sp.senac.br,
+                    contato@empreendasenac.com.br, empreenda-senac@neuronio.com.br e empreenda@digito1.com.br.
+                    Recomendamos também verificar periodicamente a caixa de spam e/ou lixeira eletrônica e, se
+                    necessário, autorizar o recebimento desses e-mails no seu servidor.</p>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="senha" class="form-label"><span class="obrigatorio">*</span>Senha:</label>
+                    <input type="password" class="form-control" id="senha" name="senha" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="confirme_senha" class="form-label"><span class="obrigatorio">*</span>Confirme sua
+                        Senha</label>
+                    <input type="password" class="form-control" id="confirme_senha" name="confirme_senha" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label"><span class="obrigatorio">*</span> Qual o seu gênero?</label>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genero" id="feminino" value="feminino"
+                                required>
+                            <label class="form-check-label" for="feminino">Feminino</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino"
+                                required>
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genero" id="nao_responder"
+                                value="nao_responder" required>
+                            <label class="form-check-label" for="nao_responder">Prefiro não responder</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label"><span class="obrigatorio">*</span> Você é uma pessoa com
+                        deficiência?</label>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="deficiencia" id="nao" value="nao"
+                                required>
+                            <label class="form-check-label" for="nao">Não</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="deficiencia" id="sim" value="sim"
+                                required>
+                            <label class="form-check-label" for="sim">Sim</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <h1>Dados de Contato</h1>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label class="form-label"><span class="obrigatorio">*</span>Telefone Celular</label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000"
+                        required>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <h1>Redes Sociais</h1>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="linkedin" class="form-label">LinkedIn:</label>
+                    <input type="text" class="form-control" id="LinkedIn" name="LinkedIn">
+                </div>
+                <div class="col-md-6">
+                    <label for="Facebook" class="form-label">Facebook:</label>
+                    <input type="text" class="form-control" id="Facebook" name="Facebook">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="Instagram" class="form-label">Instagram:</label>
+                    <input type="text" class="form-control" id="Instagram" name="Instagram">
+                </div>
+                <div class="col-md-6">
+                    <label for="Twitter" class="form-label">Twitter / X:</label>
+                    <input type="text" class="form-control" id="Twitter" name="Twitter">
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <h1>Informações do Curso</h1>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="tipo_curso" class="form-label"><span class="obrigatorio">*</span>Tipo do curso:</label>
+                    <input type="text" class="form-control" id="tipo_curso" name="tipo_curso" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="Categoria" class="form-label"><span class="obrigatorio">*</span>Categoria</label>
+                    <input type="text" class="form-control" id="Categoria" name="Categoria" required>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="Unidade" class="form-label"><span class="obrigatorio">*</span>Unidade:</label>
+                    <input type="text" class="form-control" id="Unidade" name="Unidade" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="nome_curso" class="form-label"><span class="obrigatorio">*</span>Nome do Curso</label>
+                    <input type="text" class="form-control" id="nome_curso" name="nome_curso" required>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="inicio_curso" class="form-label"><span class="obrigatorio">*</span>Início do
+                        Curso:</label>
+                    <input type="text" class="form-control" id="inicio_curso" name="inicio_curso" placeholder="MM/AAAA"
+                        required>
+                </div>
+                <div class="col-md-6">
+                    <label for="termino_curso" class="form-label"><span class="obrigatorio">*</span>Término do
+                        Curso</label>
+                    <input type="text" class="form-control" id="termino_curso" name="termino_curso" required
+                        placeholder="MM/AAAA">
+                </div>
+            </div>
+            <label for="como_soube"><span class="obrigatorio">*</span>Como ficou sabendo da competição?</label>
+            <input type="text" id="como_soube" name="como_soube" required>
+            <div class="section-divider"></div>
+            <h1>Dados da Equipe</h1>
+            <label for="nome_equipe"><span class="obrigatorio">*</span>Nome da equipe:</label>
+            <input type="text" id="nome_equipe" name="nome_equipe" required>
+        </form>
+
+        <button type="submit" class="btn btn-primary btn-salvar">Salvar Informações</button>
+
+        <!-- Mensagem de sucesso -->
+        <div id="mensagemSucesso" class="alert alert-success mt-3 d-none">
+            Cadastro realizado. Parabéns!
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div id="mensagemAlerta" class="alert alert-danger mt-3 d-none">
+            Sua inscrição não foi realizada. Confirme todos os campos obrigatórios.
+        </div>
+
+
+        <p class="footer">© Empreenda - Senac 18ª edição | Fale com a gente: empreenda@sp.senac.br</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/validacao.js"></script>
+</body>
+
+</html>
