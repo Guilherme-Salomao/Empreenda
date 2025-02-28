@@ -78,7 +78,6 @@ Seção do título
     font-size: 0.8rem;
     margin-bottom: 10px;
 }
-
 /* -----------------------------------------------------
 Formulário
 -------------------------------------------------------*/
@@ -87,7 +86,6 @@ Formulário
     padding: 20px;
     border-radius: 8px;
 }
-
 .container form h1 {
     margin: 20px 0;
     color: #00ffff;
@@ -97,7 +95,6 @@ Formulário
     text-align: left;
     font-size: 1.5rem;
 }
-
 .container form label {
     font-family: 'MuseoSans2', sans-serif;
     color: #f4e7e7;
@@ -105,7 +102,6 @@ Formulário
     display: block;
     margin-bottom: 5px;
 }
-
 .container form input {
     width: 100%;
     background-color: #B3B6B5;
@@ -116,35 +112,25 @@ Formulário
     font-family: 'MuseoSans2', sans-serif;
     font-size: 0.9rem;
 }
-
 .container form input:focus {
     border: 1px solid #00ffff;
     background-color: #B3B6B5;
     color: #333;
 }
-
-/* Ajustando a obrigatoriedade */
 .container form .obrigatorio {
     font-family: 'MuseoSans2', sans-serif;
     color: #00ffff;
     font-size: 1rem;
 }
-
-/* -----------------------------------------------------
-Divisão dos Inputs em Duas Colunas (Responsivo com Bootstrap)
--------------------------------------------------------*/
 .input-group {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
-
 .input-group .input-box {
     flex: 1;
-    min-width: 250px; /* Garante que não fiquem muito pequenos em telas menores */
+    min-width: 250px; 
 }
-
-/* Ajuste para os inputs dentro do Bootstrap */
 .row .col-md-6 {
     padding-bottom: 10px;
 }
@@ -154,7 +140,6 @@ Divisão dos Inputs em Duas Colunas (Responsivo com Bootstrap)
     gap: 10px;
     margin-bottom: 5px;
 }
-
 .container form .form-check-input {
     appearance: none;
     -webkit-appearance: none;
@@ -169,12 +154,10 @@ Divisão dos Inputs em Duas Colunas (Responsivo com Bootstrap)
     transition: all 0.2s ease-in-out;
     vertical-align: middle;
 }
-
 .container form .form-check-input:checked {
     background-color: #00ffff;
     border-color: #00ffff;
 }
-
 .container form .form-check-label {
     font-size: 0.9rem;
     color: #f4e7e7;
@@ -182,29 +165,28 @@ Divisão dos Inputs em Duas Colunas (Responsivo com Bootstrap)
     align-items: center;
     margin: 0;
 }
-
 .radio-group {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 .section-divider {
-    border-bottom: 2px solid #ffffff; /* Cor branca */
-    margin: 20px 0; /* Espaçamento superior e inferior */
+    border-bottom: 2px solid #ffffff; 
+    margin: 20px 0; 
 }
 .btn-salvar {
     margin-top: 20px;
     margin-bottom: 50px;
-    background-color: #ff004c; /* Cor de fundo vermelho vibrante */
-    color: #ffffff; /* Texto branco */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    text-transform: uppercase; /* Texto em caixa alta */
-    padding: 12px 24px; /* Espaçamento interno */
-    border: none; /* Sem borda */
-    border-radius: 8px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de clique */
-    transition: background-color 0.3s ease-in-out; /* Efeito suave na mudança de cor */
+    background-color: #ff004c; 
+    color: #ffffff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease-in-out; 
 }
 .btn-salvar:hover {
     background-color: #ff004c; 
