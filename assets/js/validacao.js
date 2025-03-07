@@ -68,7 +68,7 @@ $(document).ready(function () {
         validarRadio('deficiencia');
         validarFormato('data_nascimento', /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/);
         validarFormato('cpf', /^\d{3}\.\d{3}\.\d{3}-\d{2}$/);
-        validarFormato('telefone', /^\(\d{2}\) \d{4}-\d{4}$/);
+        validarFormato('telefone', /^\(\d{2}\) \d{5}-\d{4}$/);
         validarFormato('inicio_curso', /^(0[1-9]|1[0-2])\/\d{4}$/);
         validarFormato('termino_curso', /^(0[1-9]|1[0-2])\/\d{4}$/);
 
