@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
             video: document.getElementById("video").value
         };
 
-        emailjs.send("service_solvgav", "template_fsqi1pr", templateParams);
+        console.log("Enviando e-mail com os seguintes dados:", templateParams); // Verificar dados antes do envio
+
+        emailjs.send("service_solvgav", "template_fsqi1pr", templateParams)
+            .then(function (response) {
+                console.log("E-mail enviado com sucesso!", response);
+            }, function (error) {
+                console.error("Erro ao enviar o e-mail:", error);
+            });
     });
 });
