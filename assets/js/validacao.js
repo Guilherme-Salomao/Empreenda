@@ -63,6 +63,7 @@ $(document).ready(function () {
         validarCampo('termino_curso');
         validarCampo('como_soube');
         validarCampo('nome_equipe');
+        validarCampo('video');
         validarRadio('genero');
         validarRadio('deficiencia');
         validarFormato('data_nascimento', /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/);
@@ -86,7 +87,7 @@ $(document).ready(function () {
         }
 
         if (!valido) {
-            $('#mensagemAlerta').removeClass('d-none').text('Sua inscrição não foi realizada. Confirme todos os campos obrigatórios.');
+            $('#mensagemAlerta').removeClass('d-none').text('Sua inscrição não foi realizada. Confirme todos os campos obrigatórios. (*)');
             $('#mensagemSucesso').addClass('d-none');
         }
 

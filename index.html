@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,9 @@
     <!-- jQuery e Máscaras -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <!-- Logo -->
@@ -182,22 +185,31 @@
             <input type="text" id="como_soube" name="como_soube" required>
             <div class="section-divider"></div>
             <h1>Dados da Equipe</h1>
-            <label for="nome_equipe"><span class="obrigatorio">*</span>Nome da equipe:</label>
-            <input type="text" id="nome_equipe" name="nome_equipe" required>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="nome_equipe"><span class="obrigatorio">*</span>Nome da equipe:</label>
+                    <input type="text" id="nome_equipe" name="nome_equipe" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="video"><span class="obrigatorio">*</span>Link do vídeo:</label>
+                    <input type="text" id="video" name="video" required>
+                </div>
+            </div>
         </form>
-        <button type="submit" class="btn btn-primary btn-salvar">Salvar Informações</button>
         <!-- Mensagem de sucesso -->
         <div id="mensagemSucesso" class="alert alert-success mt-3 d-none">
             Cadastro realizado. Parabéns!
         </div>
         <!-- Mensagem de erro -->
         <div id="mensagemAlerta" class="alert alert-danger mt-3 d-none">
-            Sua inscrição não foi realizada. Confirme todos os campos obrigatórios.
+            Sua inscrição não foi realizada. Confirme todos os campos obrigatórios (*).
         </div>
+        <button type="submit" class="btn btn-primary btn-salvar">Salvar Informações</button>
         <p class="footer">© Empreenda - Senac 18ª edição | Fale com a gente: empreenda@sp.senac.br</p>
     </div>
     <!-- Scripts -->
     <script src="assets/js/validacao.js"></script>
+    <script src="assets/js/email.js"></script>
 </body>
 
 </html>
